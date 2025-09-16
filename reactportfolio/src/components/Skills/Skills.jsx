@@ -55,13 +55,7 @@ const Skills = () => {
             🚀 View Projects
           </a>
        
-          <a
-            href="https://silveroakuni.ac.in/"
-            className="bg-green-600 hover:bg-green-800 text-white px-6 py-2 rounded-lg font-semibold shadow-md"
-            
-          >
-            🎓 View University
-          </a>
+       
         </div>
       </div>
     </section>
