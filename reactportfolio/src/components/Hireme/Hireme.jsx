@@ -57,23 +57,31 @@ const Hireme = () => {
             <h2 className="text-3xl font-bold text-purple-600 mb-4">
               Hire Me
             </h2>
-
-           {/* Skills Paragraph */}
+{/* Skills Paragraph */}
 <section className="max-w-3xl mx-auto p-6 text-gray-800 leading-relaxed font-sans">
   <p>
-    I am a dedicated <span className="font-semibold">Full-Stack Developer</span> with hands-on expertise in{" "}
+    I am a passionate and results-driven{" "}
+    <span className="font-semibold">Full-Stack Developer</span> skilled in{" "}
     <span className="font-semibold">
-      HTML5, CSS3, JavaScript, React.js, Flask, and Django
+      JavaScript, React.js, Python (Flask & Django), FastAPI, and MySQL
     </span>. 
-    I specialize in building <em>scalable, secure, and visually engaging web applications</em> that seamlessly combine{" "}
-    <span className="font-semibold">frontend creativity</span> with{" "}
-    <span className="font-semibold">backend efficiency</span>. 
-    My skill set extends to <span className="font-semibold">RESTful APIs, responsive UI/UX design, database integration, and performance optimization</span>, 
-    enabling me to transform complex ideas into smooth, user-friendly solutions. 
-    With a strong focus on <em>problem-solving, clean code practices, and continuous learning</em>, 
-    I aim to deliver digital products that not only meet business needs but also create a lasting impact.
+    I excel at crafting <em>scalable, secure, and high-performance web applications</em> that 
+    bridge the gap between{" "}
+    <span className="font-semibold">innovative frontend experiences</span> and{" "}
+    <span className="font-semibold">robust backend architectures</span>. 
+    My expertise covers{" "}
+    <span className="font-semibold">
+      dynamic website development, authentication systems, e-commerce solutions, 
+      content management, and performance optimization
+    </span>. 
+    With a strong foundation in{" "}
+    <span className="font-semibold">problem-solving, clean coding practices, and continuous learning</span>, 
+    I am committed to delivering{" "}
+    <em>professional digital solutions</em> that not only meet business goals but also 
+    create a meaningful user impact.
   </p>
 </section>
+
 
 
             {/* Form */}
