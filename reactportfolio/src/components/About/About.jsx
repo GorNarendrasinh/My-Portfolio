@@ -20,7 +20,7 @@ const About = () => {
           <img
             src={profilePic}
             alt="Bapu"
-            className="w-56 h-56 object-cover rounded-2xl shadow-lg border-4 border-purple-500"
+            className="w-55 h-60 object-cover rounded-2xl shadow-lg border-4 border-purple-500"
           />
         </motion.div>
 
