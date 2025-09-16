@@ -39,7 +39,7 @@ const projects = [
   {
     title: "Responsive-Restaurant",
     description: "Real-time chat application using Socket.io and Node.js.",
-    tech: ["React", "Node.js", "Socket.io"],
+    tech: ["React", "Tailwind CSS", "Socket.io"],
     github: "https://github.com/yourusername/chat-app",
     image: restorentImg
   },
