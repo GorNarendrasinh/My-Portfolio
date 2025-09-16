@@ -35,7 +35,7 @@ export default function ContactComponent() {
     try {
       const body = {
         ...form,
-        subject: form.subject.trim() ? form.subject : "Contact Me", // default subject
+        subject: form.subject.trim() ? form.subject : "Contact Me",
       };
 
       const response = await fetch("https://formspree.io/f/mzzawkrz", {
@@ -57,96 +57,100 @@ export default function ContactComponent() {
   };
 
   return (
-    <section id="Contact" className="max-w-3xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-md">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-2">Contact Me</h2>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
-        Have a project or question? Fill the form below.
-      </p>
+    <>
+      <section id="Contact" className="max-w-3xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-md">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-2">Contact Me</h2>
+        <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+          Have a project or question? Fill the form below.
+        </p>
 
-      <form className="space-y-4" onSubmit={handleSubmit} noValidate>
-        {/* Name */}
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="name">Name</label>
-          <input
-            id="name"
-            type="text"
-            value={form.name}
-            onChange={handleChange("name")}
-            className={`w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 ${
-              errors.name ? "border-red-400 ring-red-200" : "border-gray-200 ring-indigo-200"
-            }`}
-            placeholder="Your name"
-          />
-          {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
-        </div>
+        <form className="space-y-4" onSubmit={handleSubmit} noValidate>
+          {/* Name */}
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              value={form.name}
+              onChange={handleChange("name")}
+              className={`w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 ${
+                errors.name ? "border-red-400 ring-red-200" : "border-gray-200 ring-indigo-200"
+              }`}
+              placeholder="Your name"
+            />
+            {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
+          </div>
 
-        {/* Email */}
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            value={form.email}
-            onChange={handleChange("email")}
-            className={`w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 ${
-              errors.email ? "border-red-400 ring-red-200" : "border-gray-200 ring-indigo-200"
-            }`}
-            placeholder="you@domain.com"
-          />
-          {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
-        </div>
+          {/* Email */}
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              value={form.email}
+              onChange={handleChange("email")}
+              className={`w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 ${
+                errors.email ? "border-red-400 ring-red-200" : "border-gray-200 ring-indigo-200"
+              }`}
+              placeholder="you@domain.com"
+            />
+            {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
+          </div>
 
-        {/* Subject */}
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="subject">Subject</label>
-          <input
-            id="subject"
-            type="text"
-            value={form.subject}
-            onChange={handleChange("subject")}
-            className="w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 border-gray-200 ring-indigo-200"
-            placeholder="Subject (optional)"
-          />
-        </div>
+          {/* Subject */}
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="subject">Subject</label>
+            <input
+              id="subject"
+              type="text"
+              value={form.subject}
+              onChange={handleChange("subject")}
+              className="w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 border-gray-200 ring-indigo-200"
+              placeholder="Subject (optional)"
+            />
+          </div>
 
-        {/* Message */}
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            rows={5}
-            value={form.message}
-            onChange={handleChange("message")}
-            className={`w-full rounded-lg border px-3 py-2 resize-y focus:outline-none focus:ring-2 ${
-              errors.message ? "border-red-400 ring-red-200" : "border-gray-200 ring-indigo-200"
-            }`}
-            placeholder="Your message..."
-          ></textarea>
-          {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message}</p>}
-        </div>
+          {/* Message */}
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              rows={5}
+              value={form.message}
+              onChange={handleChange("message")}
+              className={`w-full rounded-lg border px-3 py-2 resize-y focus:outline-none focus:ring-2 ${
+                errors.message ? "border-red-400 ring-red-200" : "border-gray-200 ring-indigo-200"
+              }`}
+              placeholder="Your message..."
+            ></textarea>
+            {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message}</p>}
+          </div>
 
-        {/* Buttons and Status */}
-        <div className="flex items-center gap-3">
-          <button
-            type="submit"
-            disabled={status.loading}
-            className="rounded-xl px-5 py-2 bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60"
-          >
-            {status.loading ? "Sending..." : "Send Message"}
-          </button>
+          {/* Buttons and Status */}
+          <div className="flex items-center gap-3">
+            <button
+              type="submit"
+              disabled={status.loading}
+              className="rounded-xl px-5 py-2 bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60"
+            >
+              {status.loading ? "Sending..." : "Send Message"}
+            </button>
 
-          <button
-            type="button"
-            onClick={() => setForm({ name: "", email: "", subject: "", message: "" })}
-            className="rounded-xl px-4 py-2 border"
-          >
-            Clear
-          </button>
+            <button
+              type="button"
+              onClick={() => setForm({ name: "", email: "", subject: "", message: "" })}
+              className="rounded-xl px-4 py-2 border"
+            >
+              Clear
+            </button>
 
-          {status.success === true && <p className="text-sm text-green-600">{status.message}</p>}
-          {status.success === false && <p className="text-sm text-red-600">{status.message}</p>}
-        </div>
-      </form>
-    </section>
+            {status.success === true && <p className="text-sm text-green-600">{status.message}</p>}
+            {status.success === false && <p className="text-sm text-red-600">{status.message}</p>}
+          </div>
+        </form>
+      </section>
+
+     
+    </>
   );
 }
