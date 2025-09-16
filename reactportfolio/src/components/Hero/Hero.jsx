@@ -15,7 +15,7 @@ const Hero = () => {
       <motion.img
         src={profilePic}
         alt="Bapu"
-        className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-purple-500 shadow-lg mb-6"
+        className="w-32 h-32 md:w-45 md:h-45 rounded-full border-4 border-purple-500 shadow-lg mb-6"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1 }}
