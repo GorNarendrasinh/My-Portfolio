@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaPython, FaNodeJs, FaDatabase } from "react-icons/fa";
 import { SiFlask, SiDjango } from "react-icons/si";
-import profilePic from "../../assets/profile2.jpg"; 
+import profilePic from "../../assets/profile1.jpg"; 
 
 const About = () => {
   const [showModal, setShowModal] = useState(false);
