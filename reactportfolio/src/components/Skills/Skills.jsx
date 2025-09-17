@@ -1,7 +1,7 @@
 // components/Skills/Skills.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaPython, FaDatabase } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaPython, FaDatabase, FaBootstrap } from "react-icons/fa";
 import { SiFlask, SiDjango } from "react-icons/si";
 
 const skills = [
@@ -13,6 +13,7 @@ const skills = [
   { name: "Flask", icon: <SiFlask />, level: 75, color: "bg-gray-700" },
   { name: "Django", icon: <SiDjango />, level: 65, color: "bg-green-700" },
   { name: "Database", icon: <FaDatabase />, level: 80, color: "bg-purple-500" },
+  {name :  "bootstrap5", icon: <FaBootstrap/>, level:85, color: "bg-yellow-800"}
 ];
 
 const Skills = () => {
