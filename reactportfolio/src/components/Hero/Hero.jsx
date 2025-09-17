@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
-import profilePic from "../../assets/profile2.jpg"; 
+import profilePic from "../../assets/profile1.jpg"; 
 const Hero = () => {
   const [openModal, setOpenModal] = useState(false);
 
@@ -15,7 +15,7 @@ const Hero = () => {
       <motion.img
         src={profilePic}
         alt="Bapu"
-        className="w-32 h-32 md:w-45 md:h-45 rounded-full border-4 border-purple-500 shadow-lg mb-6"
+        className="w-32 h-32 md:w-55 md:h-65 rounded-full border-4 border-purple-500 shadow-lg mb-6"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1 }}
