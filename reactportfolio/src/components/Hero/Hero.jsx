@@ -3,6 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import profilePic from "../../assets/profile1.jpg"; 
+
 const Hero = () => {
   const [openModal, setOpenModal] = useState(false);
 
@@ -67,7 +68,7 @@ const Hero = () => {
 
       {/* CTA Buttons */}
       <motion.div
-        className="flex gap-4 mb-8"
+        className="flex gap-4 mb-8 flex-wrap justify-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 1 }}
@@ -79,7 +80,7 @@ const Hero = () => {
           🚀 View Projects
         </a>
 
-        {/* Download Resume button (Modal Viewer) */}
+        {/* Resume Button */}
         <button
           onClick={() => setOpenModal(true)}
           className="bg-blue-600 hover:bg-blue-800 px-6 py-2 rounded-lg font-semibold"
@@ -135,13 +136,16 @@ const Hero = () => {
         <a href="https://github.com/" target="_blank" rel="noreferrer">
           <FaGithub className="hover:text-purple-400" />
         </a>
-        <a href="https://www.linkedin.com/in/gor-narendrasinh-a89600270" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.linkedin.com/in/gor-narendrasinh-a89600270"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaLinkedin className="hover:text-blue-400" />
         </a>
-       <a href="mailto:narendrasinhgor94@gmail.com?subject=Hello Narendra&body=I want to connect with you!">
-  <FaEnvelope className="hover:text-green-400" />
-</a>
-
+        <a href="mailto:narendrasinhgor94@gmail.com?subject=Hello Narendra&body=I want to connect with you!">
+          <FaEnvelope className="hover:text-green-400" />
+        </a>
         <a href="https://twitter.com/" target="_blank" rel="noreferrer">
           <FaTwitter className="hover:text-sky-400" />
         </a>
