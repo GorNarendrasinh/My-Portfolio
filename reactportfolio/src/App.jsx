@@ -9,19 +9,22 @@ import Footer from "./components/Footer/Footer";
 import ContactComponent from "./components/Contact/Contact"
 import Achievements from "./components/Achievements/Achievements"
 import Hireme from "./components/Hireme/Hireme"
+import ChatBot from "./components/ChatBot/ChatBot";
+
  
 
 function App() {
   return (
     <div className="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+     <ChatBot/>
       <Navbar />
       <HeroSection />
       <About />
       <Skills/>
       <Projects />
       <Certifications/>
-       <Hireme/>
       <Achievements/>
+      <Hireme/>
       <ContactComponent />
       <Footer />
     
