@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function ChatBot() {
@@ -11,6 +11,13 @@ function ChatBot() {
   ]);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
+
+  const messagesEndRef = useRef(null);
+
+  // Scroll to bottom when messages change
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, typing]);
 
   // Bot Replies
   const botReplies = {
@@ -37,7 +44,7 @@ function ChatBot() {
     ],
   };
 
-  // Function to simulate typing word-by-word
+  // Function to simulate typing
   const simulateTyping = (fullText) => {
     setTyping(true);
     let index = 0;
@@ -56,7 +63,7 @@ function ChatBot() {
         clearInterval(interval);
         setTyping(false);
       }
-    }, 150); // typing speed (ms) per word
+    }, 120);
   };
 
   const handleSend = (text = input) => {
@@ -80,18 +87,18 @@ function ChatBot() {
         reply = randomReply;
       }
 
-      // Add empty bot message first (for typing simulation)
+      // Add empty bot message first (for typing)
       setMessages((prev) => [...prev, { from: "bot", text: "" }]);
       simulateTyping(reply);
-    }, 500); // small delay before bot starts typing
+    }, 500);
   };
 
   return (
     <>
-      {/* Floating Button */}
+      {/* Floating Chat Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-5 right-5 bg-gradient-to-r from-red-600 to-pink-600 p-4 rounded-full shadow-lg hover:scale-110 transition-transform text-white text-xl"
+        className="fixed bottom-32 right-5 bg-gradient-to-r from-red-600 to-pink-600 p-4 rounded-full shadow-lg hover:scale-110 transition-transform text-white text-xl z-50"
       >
         💬
       </button>
@@ -104,7 +111,7 @@ function ChatBot() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-20 right-5 w-80 shadow-2xl rounded-2xl overflow-hidden bg-white border flex flex-col"
+            className="fixed bottom-40 right-5 w-80 shadow-2xl rounded-2xl overflow-hidden bg-white border flex flex-col z-50"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-red-600 to-pink-600 text-white p-3">
@@ -126,8 +133,6 @@ function ChatBot() {
                   {msg.text}
                 </div>
               ))}
-
-              {/* Typing Dots Animation */}
               {typing && (
                 <div className="bg-gray-200 text-gray-800 p-2 rounded-xl w-16 flex justify-center">
                   <span className="animate-bounce">●</span>
@@ -135,6 +140,7 @@ function ChatBot() {
                   <span className="animate-bounce delay-300">●</span>
                 </div>
               )}
+              <div ref={messagesEndRef} />
             </div>
 
             {/* Quick Reply Buttons */}
