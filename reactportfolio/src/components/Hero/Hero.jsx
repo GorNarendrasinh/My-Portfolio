@@ -163,12 +163,12 @@ const Hero = () => {
               ✖
             </button>
 
-            {/* PDF Viewer */}
-            <iframe
-              src="public/resume.pdf"
-              title="Resume"
-              className="w-full h-[500px] rounded"
-            />
+         <iframe
+                src="/resume.pdf"
+                 title="Resume"
+                 className="w-full h-[500px] rounded"
+                    />
+
           </div>
         </div>
       )}
