@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
-import profilePic from "../../assets/profile1.jpg"; 
+import profilePic from "../../assets/profile1.jpg";
 
 const Hero = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -163,12 +163,12 @@ const Hero = () => {
               ✖
             </button>
 
-         <iframe
-                src="/resume.pdf"
-                 title="Resume"
-                 className="w-full h-[500px] rounded"
-                    />
-
+            {/* PDF Viewer */}
+            <iframe
+              src="/Resume.pdf"
+              title="Resume"
+              className="w-full h-[500px] rounded"
+            />
           </div>
         </div>
       )}
