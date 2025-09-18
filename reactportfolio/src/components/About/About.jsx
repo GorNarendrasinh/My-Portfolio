@@ -103,7 +103,7 @@ const About = () => {
             </div>
             {/* PDF Viewer */}
             <iframe
-              src="public/resume.pdf"
+              src="/Resume.pdf"
               className="w-full h-[500px] border"
               title="Resume"
               
@@ -111,7 +111,7 @@ const About = () => {
              {/* Download Button */}
             <div className="mt-4 text-center">
               <a
-                href="/resume.pdf"
+                href="/Resume.pdf"
                 download
                 className="bg-purple-600 hover:bg-purple-800 text-white px-6 py-2 rounded-lg font-semibold shadow-md"
               >
