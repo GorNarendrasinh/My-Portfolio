@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="bg-gradient-to-r from-blue-900 via-black to-purple-900 text-white min-h-screen flex flex-col justify-center items-center text-center p-6"
+      className="bg-gradient-to-r from-blue-900 via-black to-purple-900 text-white min-h-screen flex flex-col justify-center items-center text-center px-4"
     >
       {/* Profile Image */}
       <motion.img
@@ -66,16 +66,16 @@ const Hero = () => {
         backend systems, and solving real-world problems with clean code.
       </motion.p>
 
-      {/* CTA Buttons */}
+      {/* CTA Buttons - 2x2 Grid */}
       <motion.div
-        className="flex gap-4 mb-8 flex-wrap justify-center"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-full max-w-md"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 1 }}
       >
         <a
           href="#projects"
-          className="bg-purple-600 hover:bg-purple-800 px-6 py-2 rounded-lg font-semibold"
+          className="bg-purple-600 hover:bg-purple-800 px-6 py-2 rounded-lg font-semibold text-center"
         >
           🚀 View Projects
         </a>
@@ -83,14 +83,14 @@ const Hero = () => {
         {/* Resume Button */}
         <button
           onClick={() => setOpenModal(true)}
-          className="bg-blue-600 hover:bg-blue-800 px-6 py-2 rounded-lg font-semibold"
+          className="bg-blue-600 hover:bg-blue-800 px-6 py-2 rounded-lg font-semibold text-center"
         >
           📄 View Resume
         </button>
 
         <a
           href="#hireme"
-          className="bg-green-600 hover:bg-green-800 px-6 py-2 rounded-lg font-semibold"
+          className="bg-green-600 hover:bg-green-800 px-6 py-2 rounded-lg font-semibold text-center"
         >
           📧 Hire Me
         </a>
@@ -99,7 +99,7 @@ const Hero = () => {
           href="https://github.com/GorNarendrasinh"
           target="_blank"
           rel="noreferrer"
-          className="bg-yellow-800 hover:bg-yellow-900 px-6 py-2 rounded-lg font-semibold flex items-center gap-2"
+          className="bg-yellow-800 hover:bg-yellow-900 px-6 py-2 rounded-lg font-semibold flex items-center justify-center gap-2"
         >
           🐱 GitHub
         </a>
