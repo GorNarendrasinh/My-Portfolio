@@ -9,7 +9,7 @@ const certifications = [
     date: "Jan 2025",
     description:
       "Deep dive into modern JavaScript concepts, ES6+, DOM manipulation, and asynchronous programming.",
-    link: "public/Certifications_js.pdf",
+    link: "/Certifications_js.pdf", // ✅ NO "public/"
   },
   {
     title: "React.js ",
@@ -17,7 +17,7 @@ const certifications = [
     date: "Oct 2024",
     description:
       "Comprehensive React.js programming course covering fundamentals to advanced concepts with hands-on projects.✅",
-    link: "public/react.pdf",
+    link: "/react.pdf",
   },
   {
     title: "Trending Technologies",
@@ -25,7 +25,7 @@ const certifications = [
     date: "Aug 2024",
     description:
       "Learn the latest trending technologies in Web Development and AI integrations.",
-    link: "public/Technologies.pdf",
+    link: "/Technologies.pdf",
   },
   {
     title: "Stock Trading In Hindi",
@@ -33,7 +33,7 @@ const certifications = [
     date: "June 2023",
     description:
       "Practical guide to stock trading in Hindi, including market strategies and risk management.",
-    link: "public/Stock.pdf",
+    link: "/Stock.pdf",
   },
   {
     title: "Affiliate Marketing",
@@ -41,7 +41,7 @@ const certifications = [
     date: "April 2023",
     description:
       "Step-by-step guide to affiliate marketing, earning strategies, and online promotions.",
-    link: "public/Greate.pdf",
+    link: "/Greate.pdf",
   },
 ];
 
@@ -90,7 +90,7 @@ const Certifications = () => {
             </motion.div>
           ))}
 
-          {/* More Coming Soon Card with + button */}
+          {/* More Coming Soon Card */}
           <motion.div
             className="bg-white dark:bg-gray-900 shadow-xl rounded-2xl p-6 flex flex-col items-center justify-center text-center opacity-90 hover:opacity-100 transition-all duration-300"
             whileHover={{ scale: 1.03 }}
@@ -106,8 +106,6 @@ const Certifications = () => {
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Always learning, always growing.
             </p>
-
-            {/* Plus button */}
             <motion.button
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.95 }}
