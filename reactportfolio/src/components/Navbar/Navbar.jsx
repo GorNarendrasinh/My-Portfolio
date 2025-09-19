@@ -19,7 +19,7 @@ function Navbar() {
     { name: "Projects", href: "#projects" },
     { name: "Certificates", href: "#certifications" },
     { name: "Achievements", href: "#achievements" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "#Contact" },
   ];
 
   return (
