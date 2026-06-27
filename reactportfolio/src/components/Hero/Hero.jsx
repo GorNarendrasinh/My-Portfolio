@@ -13,17 +13,17 @@ const Hero = () => {
       className="bg-gradient-to-r from-blue-900 via-black to-purple-900 text-white min-h-screen flex flex-col justify-center items-center text-center p-6 relative overflow-hidden"
     >
       {/* AI / Availability Badge */}
-      <motion.div
-        className="mb-5 z-10"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <span className="px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs md:text-sm font-semibold tracking-wide backdrop-blur-md shadow-[0_0_15px_rgba(34,197,94,0.2)] inline-flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          Available for Internship & Freelance
-        </span>
-      </motion.div>
+<motion.div
+  className="mt-10 mb-6 md:mt-5 md:mb-5 z-10"
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  <span className="px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide backdrop-blur-md shadow-[0_0_15px_rgba(34,197,94,0.15)] inline-flex items-center gap-2 whitespace-nowrap">
+    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+    Available for Internship, Job & Freelance
+  </span>
+</motion.div>
 {/* Profile Image with Cyber Glow */}
 <div className="relative mb-7 group">
   {/* Glow Effect */}
