@@ -7,7 +7,6 @@ import Projects from "./components/Projects/Projects";
 import Certifications from "./components/Certifications/Certifications";
 import Footer from "./components/Footer/Footer";
 import ContactComponent from "./components/Contact/Contact"
-import Achievements from "./components/Achievements/Achievements"
 import Hireme from "./components/Hireme/Hireme"
 import ChatBot from "./components/ChatBot/ChatBot";
 
@@ -23,7 +22,6 @@ function App() {
       <Skills/>
       <Projects />
       <Certifications/>
-      <Achievements/>
       <Hireme/>
       <ContactComponent />
       <Footer />
